@@ -1,0 +1,18 @@
+QTags.addButton(
+    'col50', 
+    'col-50', 
+    '[col-50]', 
+    '[/col-50]'
+);
+QTags.addButton(
+    'col33', 
+    'col-33', 
+    '[col-33]', 
+    '[/col-33]'
+);
+QTags.addButton(
+    'col25', 
+    'col-25', 
+    '[col-25]', 
+    '[/col-25]'
+);
