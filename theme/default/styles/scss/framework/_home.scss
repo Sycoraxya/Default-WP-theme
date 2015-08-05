@@ -1,0 +1,57 @@
+/* Home */
+
+.services {
+    width: 100%;
+}
+
+.services .contactbtnwrap a, .contactbtn {
+    background: $main-color;
+    display: inline-block;
+    padding: 11px;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 40px 0;
+}
+.service {
+    display: inline-block;
+    width: 25%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+    vertical-align: top;
+    z-index: 999;
+    h4 {
+        font: {
+            size: 24px;
+            weight: 600;
+        }
+        margin: 17px 0;
+        color: $main-color;
+    }
+    .icon {
+        width: 100px;
+        height: 100px;
+        background: $main-color;
+        border-radius: 50%;
+        display: block;
+        margin: -50px auto 0 auto;
+        text-align: center;
+    }
+    p {
+        font-family: $main-font-family;
+        padding: 0 25px;
+    }
+    .icon{
+        &.icon-leaf, &.icon-calendar-empty, &.icon-wrench, &.icon-ok{
+            &:before{
+                color: white;
+                line-height: 100px;
+                font-size: 2.5em;
+                margin-top: -2px;
+            }
+        }
+    }
+}

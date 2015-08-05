@@ -1,0 +1,41 @@
+/* Slider */
+#slider {
+  width: 100%;
+  height: auto;
+  background: #1FB25A;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+}
+
+/* contact */
+p.info-right,
+p.info-left {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.entry-content div.wpcf7-response-output {
+  margin: 0px 0 30px 0;
+  position: absolute;
+  bottom: 0;
+}
+
+.wpcf7-form {
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.wpcf7 p {
+  margin-bottom: 20px;
+}

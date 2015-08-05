@@ -1,0 +1,66 @@
+@media screen and (max-width:580px){
+    .archive #header,
+    .page-template-default #header {
+        -webkit-box-shadow: 0px 5px 20px 0px rgba(50, 50, 50, 0.0);
+        -moz-box-shadow: 0px 5px 20px 0px rgba(50, 50, 50, 0.0);
+        box-shadow: 0px 5px 20px 0px rgba(50, 50, 50, 0.0);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.0);
+        border-bottom: 1px solid rgba(86, 117, 174, 0.3);
+    }
+    .menu-item {
+        border-top: 1px solid rgba(86, 117, 174, 0.3);
+    }
+    #menu {
+        margin-bottom: 0px;
+        margin-top: -1px;
+        padding: 0 0;
+    }
+    #menu div ul li {
+        display: block;
+        margin-right: 0;
+        /*padding: 10px 0;*/
+        
+        padding: 0;
+    }
+    #menu div ul li a {
+        width: 100%;
+        display: block;
+        line-height: 40px;
+    }
+    #menu div ul li.current-menu-item,
+    .single-projecten #menu-item-18,
+    .single-blog #menu-item-55,
+    .single-nieuws #menu-item-56,
+    .post-type-archive-projecten #menu-item-18,
+    .post-type-archive-nieuws #menu-item-56,
+    .post-type-archive-blog #menu-item-55 {
+        padding-bottom: 0;
+        border-bottom: 0;
+        background: $main-color;
+        /*padding: 10px 0; */
+        
+        padding: 0;
+    }
+    #menu div ul li.current-menu-item a,
+    .single-projecten #menu-item-18 a,
+    .single-blog #menu-item-55 a,
+    .single-nieuws #menu-item-56 a,
+    .post-type-archive-projecten #menu-item-18 a,
+    .post-type-archive-nieuws #menu-item-56 a,
+    .post-type-archive-blog #menu-item-55 a {
+        line-height: 40px;
+        color: white;
+    }
+    .archive #container,
+    .page-template-default #container {
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .service {
+        width: 100%;
+    }
+    .service .icon {
+        margin: 20px auto;
+    }
+}

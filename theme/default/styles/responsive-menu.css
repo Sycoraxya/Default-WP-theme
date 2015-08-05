@@ -1,0 +1,69 @@
+#menu div ul li.menu-item {}
+
+@media screen and (max-width: 580px) {
+    .archive #header,
+    .page-template-default #header {
+        -webkit-box-shadow: 0px 5px 20px 0px rgba(50, 50, 50, 0);
+        -moz-box-shadow: 0px 5px 20px 0px rgba(50, 50, 50, 0);
+        box-shadow: 0px 5px 20px 0px rgba(50, 50, 50, 0);
+        border-bottom: 1px solid transparent;
+        border-bottom: 1px solid rgba(86, 117, 174, 0.3);
+    }
+    .menu-item {
+        border-top: 1px solid rgba(86, 117, 174, 0.3);
+    }
+    #menu div ul li a {padding:6px 0;}
+    #menu {
+        margin-bottom: 0px;
+        margin-top: -1px;
+        padding: 0 0;
+    }
+    #menu div ul li {
+        display: block;
+        margin-right: 0;
+        /*padding: 10px 0;*/
+        
+        padding: 0;
+    }
+    #menu div ul li a {
+        width: 100%;
+        display: block;
+        line-height: 40px;
+    }
+}
+
+@media screen and (max-width: 621px) {
+    #slider {
+        background-image: url(http://default-theme.odinovereem.dev.i-aspect.com/wp-content/uploads/2015/06/UM62EOZSRC.jpg);
+    }
+    #menu {
+        height: 0px;
+        transition: all 0.3s ease-in-out;
+        overflow: hidden;
+    }
+}
+@media screen and (min-width: 621px) {
+    #menu {
+        height: auto!important;   
+    }
+}
+#mobile-menu.mobile-menu-active {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+    z-index: 99;
+}
+
+#mobile-menu.mobile-menu-active .icon-menu {
+    color: white;
+    font-size: 2em;
+    line-height: 50px;
+}
+
+#mobile-menu {
+    display: none;
+}
