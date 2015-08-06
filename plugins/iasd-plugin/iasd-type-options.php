@@ -85,7 +85,9 @@ function iasd_general_options_callback() {
  */
 function iasd_toggle_blog_callback($args) {
         // First, we read the options collection
-    $options = get_option('iasd_theme_display_options');
+    $default = array('');
+    $theme_options = get_option( 'iasd_theme_display_options', $default );
+    $options = wp_parse_args($options, $default);
      
     // Next, we update the name attribute to access this element's ID in the context of the display options array
     // We also access the show_header element of the options collection in the call to the checked() helper function
@@ -99,7 +101,9 @@ function iasd_toggle_blog_callback($args) {
 } // end sandbox_toggle_header_callback
 function iasd_toggle_nieuws_callback($args) {
              // First, we read the options collection
-    $options = get_option('iasd_theme_display_options');
+    $default = array('');
+    $theme_options = get_option( 'iasd_theme_display_options', $default );
+    $options = wp_parse_args($options, $default);
      
     // Next, we update the name attribute to access this element's ID in the context of the display options array
     // We also access the show_header element of the options collection in the call to the checked() helper function
@@ -113,7 +117,9 @@ function iasd_toggle_nieuws_callback($args) {
 } // end sandbox_toggle_header_callback
 function iasd_toggle_projecten_callback($args) {
              // First, we read the options collection
-    $options = get_option('iasd_theme_display_options');
+    $default = array('');
+    $theme_options = get_option( 'iasd_theme_display_options', $default );
+    $options = wp_parse_args($options, $default);
      
     // Next, we update the name attribute to access this element's ID in the context of the display options array
     // We also access the show_header element of the options collection in the call to the checked() helper function
@@ -125,5 +131,7 @@ function iasd_toggle_projecten_callback($args) {
     echo $html;
      
 } // end sandbox_toggle_header_callback
-$display_options = get_option('iasd_theme_display_options');
+$default = array('');
+$theme_options = get_option( 'iasd_theme_display_options', $default );
+$options = wp_parse_args($options, $default);
 ?>

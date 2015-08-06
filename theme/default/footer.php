@@ -1,7 +1,7 @@
 <div class="clear"></div>
 </div>
 <footer id="footer" role="contentinfo">
-    <?php $social_options = get_option ( 'iasd_theme_social_options');?>
+    <?php     $default = array(''); $social_options = get_option ( 'iasd_theme_social_options', $default); $social_options = wp_parse_args($social_options, $default);?>
     <div class="footerwrapper">
         <div class="aboutus">
             <h1>Over Ons</h1>

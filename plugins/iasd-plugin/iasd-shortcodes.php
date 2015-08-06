@@ -39,7 +39,7 @@ add_shortcode( 'googlemaps', 'iasd_contact_googlemaps_shortcode' );
 
 function col_50( $atts , $content = null ) {
     $html = '<div class="col-50">';
-    $html .= $content;
+    $html .= do_shortcode($content);
     $html .= '</div>';
 
     return $html;
@@ -48,7 +48,7 @@ add_shortcode( 'col-50', 'col_50' );
 
 function col_33( $atts , $content = null ) {
     $html = '<div class="col-33">';
-    $html .= $content;
+    $html .= do_shortcode($content);
     $html .= '</div>';
 
     return $html;
@@ -57,7 +57,7 @@ add_shortcode( 'col-33', 'col_33' );
 
 function col_25( $atts , $content = null ) {
     $html = '<div class="col-25">';
-    $html .= $content;
+    $html .= do_shortcode($content);
     $html .= '</div>';
 
     return $html;

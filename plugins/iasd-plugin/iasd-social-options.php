@@ -113,28 +113,37 @@ function iasd_social_options_callback(){
     echo '<p>Voer uw adresgegevens in.</p>';
 }
 function iasd_bedrijfsnaam_callback(){
-    $options = get_option( 'iasd_theme_social_options' );
-    
+    $default = array('');
+    $options = get_option( 'iasd_theme_social_options', $default );
+    $options = wp_parse_args($options, $default);
     echo '<input type="text" id="bedrijfsnaam" name="iasd_theme_social_options[bedrijfsnaam]" value="'. $options['bedrijfsnaam'] .'" />';
     
 }
 function iasd_straat_callback(){
-    $options = get_option( 'iasd_theme_social_options' );
+    $default = array('');
+    $options = get_option( 'iasd_theme_social_options', $default );
+    $options = wp_parse_args($options, $default);
     
     echo '<input type="text" id="straat" name="iasd_theme_social_options[straat]" value="'. $options['straat'] .'" />';
 }
 function iasd_postcode_callback(){
-    $options = get_option( 'iasd_theme_social_options' );
+    $default = array('');
+    $options = get_option( 'iasd_theme_social_options', $default );
+    $options = wp_parse_args($options, $default);
     
     echo '<input type="text" id="postcode" name="iasd_theme_social_options[postcode]" value="'. $options['postcode'] .'" />';
 }
 function iasd_telefoon_callback(){
-    $options = get_option( 'iasd_theme_social_options' );
+    $default = array('');
+    $options = get_option( 'iasd_theme_social_options', $default );
+    $options = wp_parse_args($options, $default);
     
     echo '<input type="text" id="telefoon" name="iasd_theme_social_options[telefoon]" value="'. $options['telefoon'] .'" />';
 }
 function iasd_email_callback(){
-    $options = get_option( 'iasd_theme_social_options' );
+    $default = array('');
+    $options = get_option( 'iasd_theme_social_options', $default );
+    $options = wp_parse_args($options, $default);
     
     echo '<input type="text" id="email" name="iasd_theme_social_options[email]" value="'. $options['email'] .'" /><br><br>';
 }
@@ -149,7 +158,9 @@ function iasd_divider_callback(){
 }
 
 function iasd_twitter_callback() {
-    $options = get_option( 'iasd_theme_social_options' );
+    $default = array('');
+    $options = get_option( 'iasd_theme_social_options', $default );
+    $options = wp_parse_args($options, $default);
     $url = '';
     if( isset( $options['twitter'] ) ) {
         $url = $options['twitter'];
@@ -157,7 +168,9 @@ function iasd_twitter_callback() {
     echo '<input type="text" id="twitter" name="iasd_theme_social_options[twitter]" value="' . $options['twitter'] . '" />';
 }
 function iasd_facebook_callback() {
-    $options = get_option( 'iasd_theme_social_options' );
+    $default = array('');
+    $options = get_option( 'iasd_theme_social_options', $default );
+    $options = wp_parse_args($options, $default);
     $url = '';
     if( isset( $options['facebook'] ) ) {
         $url = $options['facebook'];
@@ -165,7 +178,9 @@ function iasd_facebook_callback() {
     echo '<input type="text" id="facebook" name="iasd_theme_social_options[facebook]" value="' . $options['facebook'] . '" />';
 }
 function iasd_googleplus_callback() {
-    $options = get_option( 'iasd_theme_social_options' );
+    $default = array('');
+    $options = get_option( 'iasd_theme_social_options', $default );
+    $options = wp_parse_args($options, $default);
     $url = '';
     if( isset( $options['googleplus'] ) ) {
         $url = $options['googleplus'];
@@ -173,7 +188,9 @@ function iasd_googleplus_callback() {
     echo '<input type="text" id="googleplus" name="iasd_theme_social_options[googleplus]" value="' . $options['googleplus'] . '" />';
 }
 function iasd_instagram_callback() {
-    $options = get_option( 'iasd_theme_social_options' );
+    $default = array('');
+    $options = get_option( 'iasd_theme_social_options', $default );
+    $options = wp_parse_args($options, $default);
     $url = '';
     if( isset( $options['instagram'] ) ) {
         $url = $options['instagram'];
@@ -181,7 +198,9 @@ function iasd_instagram_callback() {
     echo '<input type="text" id="instagram" name="iasd_theme_social_options[instagram]" value="' . $options['instagram'] . '" />';
 }
 function iasd_pinterest_callback() {
-    $options = get_option( 'iasd_theme_social_options' );
+    $default = array('');
+    $options = get_option( 'iasd_theme_social_options', $default );
+    $options = wp_parse_args($options, $default);
     $url = '';
     if( isset( $options['pinterest'] ) ) {
         $url = $options['pinterest'];
@@ -189,7 +208,9 @@ function iasd_pinterest_callback() {
     echo '<input type="text" id="pinterest" name="iasd_theme_social_options[pinterest]" value="' . $options['pinterest'] . '" />';
 }
 function iasd_linkedin_callback() {
-    $options = get_option( 'iasd_theme_social_options' );
+    $default = array('');
+    $options = get_option( 'iasd_theme_social_options', $default );
+    $options = wp_parse_args($options, $default);
     $url = '';
     if( isset( $options['linkedin'] ) ) {
         $url = $options['linkedin'];
@@ -215,6 +236,7 @@ function iasd_theme_sanitize_social_options( $input ) {
     return apply_filters( 'iasd_theme_sanitize_social_options', $output, $input );
  
 } // end iasd_theme_sanitize_social_options
-
-$social_options = get_option ( 'iasd_theme_social_options' );
+$default = array('');
+$social_options = get_option( 'iasd_theme_social_options', $default );
+$social_options = wp_parse_args($social_options, $default);
 ?>

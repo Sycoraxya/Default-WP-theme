@@ -47,16 +47,24 @@ function iasd_advanced_setup_callback(){
 }
 
 function iasd_nieuws_archief_pagina_callback(){
-    $options = get_option( 'iasd_theme_advanced_setup' );
+    $default = array('');
+    $options = get_option( 'iasd_theme_advanced_setup', $default );
+    $options = wp_parse_args($options, $default);
     echo '<input type="text" id="nieuws_archief" name="iasd_theme_advanced_setup[nieuws_archief]" value="'. $options[ 'nieuws_archief' ] .'" />';
 }
 function iasd_blog_archief_pagina_callback(){
-    $options = get_option( 'iasd_theme_advanced_setup' );
+    $default = array('');
+    $options = get_option( 'iasd_theme_advanced_setup', $default );
+    $options = wp_parse_args($options, $default);
     echo '<input type="text" id="blog_archief" name="iasd_theme_advanced_setup[blog_archief]" value="'. $options[ 'blog_archief' ] .'" />';
 }
 function iasd_projecten_archief_pagina_callback(){
-    $options = get_option( 'iasd_theme_advanced_setup' );
+    $default = array('');
+    $options = get_option( 'iasd_theme_advanced_setup', $default );
+    $options = wp_parse_args($options, $default);
     echo '<input type="text" id="projecten_archief" name="iasd_theme_advanced_setup[projecten_archief]" value="'. $options[ 'projecten_archief' ] .'" />';
 }
-$advanced_setup = get_option ( 'iasd_theme_advanced_setup' );
+$default = array('');
+$advanced_setup = get_option( 'iasd_theme_advanced_setup', $default );
+$advanced_setup = wp_parse_args($advanced_setup, $default);
 ?>

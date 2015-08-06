@@ -7,7 +7,6 @@
 * Author: Stefan verweij
 * Author URI: http://stefanverweij.com/
 **/
-
 // Add menu item
 include 'iasd-addmenu.php';
 include 'iasd-type-options.php';
@@ -21,7 +20,8 @@ include 'iasd-advanced-setup.php';
 include 'iasd-theme-styles.php';*/
 
 // Add shortcodes
-$social_options = get_option ( 'iasd_theme_social_options' );
+$default = array('');
+$social_options = get_option ( 'iasd_theme_social_options', $default  );
 include 'iasd-shortcodes.php';
 
 // Add quicktags
@@ -104,8 +104,6 @@ function replace_thickbox_text($translated_text, $text, $domain) {
     );
 }
 add_action( 'init', 'projects_taxonomy');*/
-
-add_action( 'init', 'add_projects_to_query');
 
 // Remove default post type
 wp_delete_post(1, true);

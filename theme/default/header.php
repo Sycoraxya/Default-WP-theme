@@ -24,8 +24,11 @@
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/script.js"></script>
     <script src="http://use.edgefonts.net/open-sans:n7,i7,n8,i8,i4,n3,i3,n4,n6,i6:all;source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js"></script>
     <?php 
-        $theme_options = get_option ( 'iasd_theme_theme_options' ); 
-        $advanced_setup = get_option ( 'iasd_theme_advanced_setup' );
+        $default = array('');
+        $theme_options = get_option ( 'iasd_theme_theme_options', $default ); 
+        $theme_options = wp_parse_args($theme_options, $default);
+        $advanced_setup = get_option ( 'iasd_theme_advanced_setup', $default );
+        $advanced_setup = wp_parse_args($advanced_setup, $default);
         include 'iasd-menu-styles.php';
         include 'iasd-theme-styles.php';
     ?>
@@ -51,7 +54,7 @@
                         </div>
                     </a>
                     <div id="info">
-                        <?php $social_options = get_option ( 'iasd_theme_social_options' );?>
+                        <?php $default = array(''); $social_options = get_option ( 'iasd_theme_social_options', $default ); $social_options = wp_parse_args($social_options, $default);?>
                         <span class="icon-phone info-block info-block-phone"><b>
                             <a href="tel:<?php echo $social_options['telefoon']; ?>">
                                 <?php echo $social_options['telefoon']; ?>
