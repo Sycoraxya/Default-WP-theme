@@ -25,10 +25,10 @@
         ?>
     }
     #wrapper .wrapper-fixed{
-        background: <?php if($theme_options['menu_background']){
+        background: rgba(0,0,0,0.8);<?php /* if($theme_options['menu_background']){
             echo $theme_options['menu_background'];  
         };
-        ?>
+        */?>
     }
     #wrapper .btn, #wrapper .read-more, #wrapper input[type="submit"]{
         background: <?php if($theme_options['button_color']){

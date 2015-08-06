@@ -6,11 +6,11 @@
     .post-type-archive-projecten #menu-item-<?php echo $advanced_setup['projecten_archief']?>,
     .post-type-archive-nieuws #menu-item-<?php echo $advanced_setup['nieuws_archief']?>,
     .post-type-archive-blog #menu-item-<?php echo $advanced_setup['blog_archief']?> {
-        padding-bottom: 12px;
-        border-bottom: 3px solid <?php if($theme_options['menu_items']){
+        padding-bottom: 3px;
+        border-bottom: 2px solid rgba(255,255,255,0.5)<?php /*<?php if($theme_options['menu_items']){
             echo $theme_options['menu_items'];  
         };
-        ?>;
+        ?>; */ ?>
     }
     
     @media screen and (max-width: 580px) {
@@ -23,7 +23,10 @@
         .post-type-archive-blog #menu-item-<?php echo $advanced_setup['blog_archief']?> {
             padding-bottom: 0;
             border-bottom: 0;
-            background: #1FB25A;
+            background: <?php if($theme_options['menu_background']){
+                echo $theme_options['menu_background'];
+            };
+            ?>
             /*padding: 10px 0; */
             
             padding: 0;

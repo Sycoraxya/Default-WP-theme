@@ -54,7 +54,7 @@ h2 a {
     text-decoration: none;
 }
 
-p {
+p, .col-50 {
     line-height: 1.8em;
 }
 
@@ -70,9 +70,6 @@ p {
 
 .btn {
     -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -ms-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
 
@@ -106,9 +103,6 @@ input[type="submit"] {
     margin: 0px 0 40px 0;
     cursor: pointer;
     -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -ms-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
 
@@ -147,10 +141,12 @@ ul li {
     vertical-align: top;
 }
 
-#content .project-content div.col-50:nth-of-type(1) {
+#content .project-content div.col-50:nth-of-type(1), .page-template-ContactTemplate section.entry-content > div:nth-of-type(1){
     padding-right: 40px;
 }
-
+.page-template-ContactTemplate section.entry-content > div:nth-of-type(2){
+    text-align: center;
+}
 #content .project-content div.col-50:nth-of-type(2) p {
     padding: 0;
 }
@@ -172,7 +168,8 @@ ul li {
 
 .archive #container,
 .page-template-default #container,
-.search #container {
+.search #container,
+.page-template-ContactTemplate #container{
     margin-top: 60px;
 }
 

@@ -1,7 +1,6 @@
 /* Responsive */
 @media screen and (max-width: 1040px) {
   #branding-wrapper,
-  #menu,
   .entry-content,
   footer,
   #content,
@@ -11,7 +10,12 @@
     width: 100%;
     box-sizing: border-box;
   }
-
+  #menu{
+      width: auto;
+  }
+  #header{
+      margin-top: 20px;
+  }
   #menu #search {
     display:none;
   }
@@ -59,6 +63,14 @@
   .service .icon {
     margin: 20px auto;
   }
+}
+@media screen and (max-width: 950px) {
+    #menu{
+        float: none;
+        padding-left: 0px;
+        padding-top: 10px;
+        display: block;
+    }
 }
 @media screen and (max-width: 890px) {
   footer#footer div > div {
@@ -154,7 +166,7 @@
     margin: 20px 0 40px 0;
   }
 }
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 645px) {
   #site-title {
     display: block;
   }

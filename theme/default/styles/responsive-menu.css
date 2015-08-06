@@ -1,10 +1,8 @@
 #menu div ul li.menu-item {}
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 645px) {
     .archive #header,
     .page-template-default #header {
-        -webkit-box-shadow: 0px 5px 20px 0px rgba(50, 50, 50, 0);
-        -moz-box-shadow: 0px 5px 20px 0px rgba(50, 50, 50, 0);
         box-shadow: 0px 5px 20px 0px rgba(50, 50, 50, 0);
         border-bottom: 1px solid transparent;
         border-bottom: 1px solid rgba(86, 117, 174, 0.3);
@@ -32,17 +30,18 @@
     }
 }
 
-@media screen and (max-width: 621px) {
+@media screen and (max-width: 645px) {
     #slider {
         background-image: url(http://default-theme.odinovereem.dev.i-aspect.com/wp-content/uploads/2015/06/UM62EOZSRC.jpg);
     }
     #menu {
         height: 0px;
+        -webkit-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
         overflow: hidden;
     }
 }
-@media screen and (min-width: 621px) {
+@media screen and (min-width: 645px) {
     #menu {
         height: auto!important;   
     }

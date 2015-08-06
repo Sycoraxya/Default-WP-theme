@@ -50,26 +50,21 @@
                             ?>" class="logo" />
                         </div>
                     </a>
+                    
+            
                     <div id="info">
-                        <?php $social_options = get_option ( 'iasd_theme_social_options' );?>
-                        <span class="icon-phone info-block info-block-phone"><b>
-                            <a href="tel:<?php echo $social_options['telefoon']; ?>">
-                                <?php echo $social_options['telefoon']; ?>
-                            </a></b>
-                        </span>
-                        <a href="<?php echo site_url(); ?>/contact"><span class="icon-doc-text info-block info-block-btn btn"><b>Call-to-action</b>
+                        <a href="<?php echo site_url(); ?>/contact"><span class="icon-doc-text info-block info-block-btn btn"><b>Lid worden</b>
                             </span></a>
                     </div>
+                    <nav id="menu" role="navigation">
+                        <div id="search" class="icon-search">
+                            <?php get_search_form(); ?>
+                        </div>
+                        <div id="menu-wrapper">
+                            <?php wp_nav_menu( array( 'theme_location'=> 'main-menu' ) ); ?>
+                        </div>
+                    </nav>
                 </div>
             </section>
-            <nav id="menu" role="navigation">
-                <div id="search" class="icon-search">
-                    <?php get_search_form(); ?>
-                </div>
-                <div id="menu-wrapper">
-                    <?php wp_nav_menu( array( 'theme_location'=> 'main-menu' ) ); ?>
-
-                </div>
-            </nav>
         </header>
         <div id="container">

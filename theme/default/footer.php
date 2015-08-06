@@ -5,10 +5,10 @@
     <div class="footerwrapper">
         <div class="aboutus">
             <h1>Over Ons</h1>
-            <p>Internetbureau i-Aspect is een fullservice internetbureau in het hartje van Utrecht. Met ruim 14 jaar ervaring, een team van specialisten in verschillende disciplines en een uitstekend netwerk van sterke partners kunt u bij ons terecht voor websites, webshops en online marketing.</p>
+            <p>Connect030 is een businessclub voor MKB Ondernemers uit de regio Utrecht. Je kunt er alleen lid van worden als je geïntroduceerd wordt door een bestaand lid. </p>
         </div>
         <div class="social">
-            <h1>Volg i-Aspect</h1>
+            <h1>Volg <?php echo $social_options['bedrijfsnaam'];?></h1>
             <ul>
                 <?php if( $social_options['facebook']){?>
                     <a href="<?php echo $social_options['facebook'];?>" target="_blank">

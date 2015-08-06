@@ -54,7 +54,7 @@ $(window).resize(function (event) {
         $('#header').removeClass("header-fixed");
     };
 
-    if (window.innerWidth < 621) {
+    if (window.innerWidth < 645) {
         if (!$('#mobile-menu').hasClass('mobile-menu-active')) {
             $('#mobile-menu').addClass('mobile-menu-active');
             $('#menu').addClass('menu-inactive');
@@ -80,7 +80,7 @@ $(document).ready(function () {
         $('#search input#s').removeClass('active');
         $('input#searchsubmit').removeClass('active');
     })
-    if (window.innerWidth < 621) {
+    if (window.innerWidth < 645) {
         if (!$('#mobile-menu').hasClass('mobile-menu-active')) {
             $('#mobile-menu').addClass('mobile-menu-active');
             $('#menu').addClass('menu-inactive');
