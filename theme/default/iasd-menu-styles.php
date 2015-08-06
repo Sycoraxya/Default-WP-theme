@@ -23,7 +23,10 @@
         .post-type-archive-blog #menu-item-<?php echo $advanced_setup['blog_archief']?> {
             padding-bottom: 0;
             border-bottom: 0;
-            background: #1FB25A;
+            background: <?php if($theme_options['menu_background']){
+                echo $theme_options['menu_background'];
+            };
+            ?>
             /*padding: 10px 0; */
             
             padding: 0;
