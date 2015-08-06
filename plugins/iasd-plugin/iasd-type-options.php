@@ -86,7 +86,7 @@ function iasd_general_options_callback() {
 function iasd_toggle_blog_callback($args) {
         // First, we read the options collection
     $default = array('');
-    $theme_options = get_option( 'iasd_theme_display_options', $default );
+    $options = get_option( 'iasd_theme_display_options', $default );
     $options = wp_parse_args($options, $default);
      
     // Next, we update the name attribute to access this element's ID in the context of the display options array
@@ -102,7 +102,7 @@ function iasd_toggle_blog_callback($args) {
 function iasd_toggle_nieuws_callback($args) {
              // First, we read the options collection
     $default = array('');
-    $theme_options = get_option( 'iasd_theme_display_options', $default );
+    $options = get_option( 'iasd_theme_display_options', $default );
     $options = wp_parse_args($options, $default);
      
     // Next, we update the name attribute to access this element's ID in the context of the display options array
@@ -118,7 +118,7 @@ function iasd_toggle_nieuws_callback($args) {
 function iasd_toggle_projecten_callback($args) {
              // First, we read the options collection
     $default = array('');
-    $theme_options = get_option( 'iasd_theme_display_options', $default );
+    $options = get_option( 'iasd_theme_display_options', $default );
     $options = wp_parse_args($options, $default);
      
     // Next, we update the name attribute to access this element's ID in the context of the display options array
@@ -132,6 +132,6 @@ function iasd_toggle_projecten_callback($args) {
      
 } // end sandbox_toggle_header_callback
 $default = array('');
-$theme_options = get_option( 'iasd_theme_display_options', $default );
-$options = wp_parse_args($options, $default);
+$display_options = get_option( 'iasd_theme_display_options', $default );
+$display_options = wp_parse_args($display_options, $default);
 ?>
